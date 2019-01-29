@@ -15,10 +15,9 @@ const ProfileSchema = new Schema({
   location: {
     type: String
   },
-  currentstatus: {
+  status: {
     type: String
-  },
-  todolist: {
-    type: Array
   }
 });
+
+module.exports = Profile = mongoose.model('profile', ProfileSchema);
