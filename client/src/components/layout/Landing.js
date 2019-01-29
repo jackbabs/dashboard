@@ -4,6 +4,8 @@ import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
+import Navbar from './Navbar';
+
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
 import InputAdornment from '@material-ui/core/InputAdornment';
@@ -28,6 +30,7 @@ import CustomInput from '../../themeComponents/CustomInput/CustomInput.jsx';
 import InfoArea from '../../themeComponents/InfoArea/InfoArea.jsx';
 import Card from '../../themeComponents/Card/Card.jsx';
 import CardBody from '../../themeComponents/Card/CardBody.jsx';
+import Heading from '../../themeComponents/Heading/Heading.jsx';
 
 import registerPageStyle from '../../assets/jss/material-dashboard-pro-react/views/registerPageStyle';
 
@@ -41,7 +44,11 @@ class Landing extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.container}>
-        <GridContainer justify="center">hello</GridContainer>
+        <GridContainer justify="center">
+          <GridItem xs={12} sm={12} md={10}>
+            <Heading title="Exo-Dash" textAlign="center" />
+          </GridItem>
+        </GridContainer>
       </div>
     );
   }

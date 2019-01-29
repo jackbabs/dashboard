@@ -9,6 +9,7 @@ import { clearCurrentProfile } from './actions/profileActions';
 import store from './store';
 
 import Landing from './components/layout/Landing';
+import Navbar from './components/layout/Navbar';
 
 import './App.css';
 
@@ -39,6 +40,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
+            <Navbar />
             <Route exact path="/" component={Landing} />
           </div>
         </Router>
