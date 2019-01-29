@@ -8,6 +8,8 @@ import { setCurrentUser, logoutUser } from './actions/authActions';
 import { clearCurrentProfile } from './actions/profileActions';
 import store from './store';
 
+import Landing from './components/layout/Landing';
+
 import './App.css';
 
 // Check for token
@@ -36,7 +38,9 @@ class App extends Component {
     return (
       <Provider store={store}>
         <Router>
-          <div className="App">Test</div>
+          <div className="App">
+            <Route exact path="/" component={Landing} />
+          </div>
         </Router>
       </Provider>
     );
